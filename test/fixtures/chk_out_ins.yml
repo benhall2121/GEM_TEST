@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  employee_id: 1
+  asset_id: 1
+  dateTimeNew: 2012-08-06 14:09:08
+  in_or_out: false
+
+two:
+  employee_id: 1
+  asset_id: 1
+  dateTimeNew: 2012-08-06 14:09:08
+  in_or_out: false

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GEMTEST</title>
+
+  <%= stylesheet_link_tag 'bootstrap' %>
+  <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+  <%= stylesheet_link_tag 'bootstrap-responsive', 'application' %>
+
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+  <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to 'GEM', root_path(), :class => 'brand' %>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><%= link_to 'Employees', employees_path() %></li>
+              <li><%= link_to 'Assets', assets_path() %></li>
+              <li><%= link_to 'Check Out In', chk_out_ins_path() %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<%= yield %>
+
+
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', 'bootstrap', 'application' %>
+</body>
+</html>

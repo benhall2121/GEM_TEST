@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Employee:</b>
+  <%= @chk_out_in.employee_id %>
+</p>
+
+<p>
+  <b>Asset:</b>
+  <%= @chk_out_in.asset_id %>
+</p>
+
+<p>
+  <b>checkedOutTime:</b>
+  <%= @chk_out_in.checkedOutTime %>
+</p>
+
+<p>
+  <b>checkedInTime:</b>
+  <%= @chk_out_in.checkedOutTime %>
+</p>
+
+
+<%= link_to 'Edit', edit_chk_out_in_path(@chk_out_in) %> |
+<%= link_to 'Back', chk_out_ins_path %>

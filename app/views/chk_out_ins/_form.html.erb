@@ -1,0 +1,25 @@
+<%= form_for(@chk_out_in) do |f| %>
+  <% if @chk_out_in.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chk_out_in.errors.count, "error") %> prohibited this chk_out_in from being saved:</h2>
+
+      <ul>
+      <% @chk_out_in.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employee_id %><br />
+    <%= f.text_field :employee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :asset_id %><br />
+    <%= f.text_field :asset_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
