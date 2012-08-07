@@ -2,7 +2,7 @@ class ChkOutInsController < ApplicationController
   # GET /chk_out_ins
   # GET /chk_out_ins.xml
   def index
-    @chk_out_ins = ChkOutIn.all
+    @chk_out_ins = ChkOutIn.all(:order => 'ISNULL(checkedInTime) desc, checkedInTime desc, checkedOutTime')
 
     respond_to do |format|
       format.html # index.html.erb

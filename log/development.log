@@ -6833,3 +6833,493 @@ Started GET "/employees/1/edit" for 127.0.0.1 at Tue Aug 07 14:25:34 -0700 2012
 Rendered employees/_form.html.erb (91.0ms)
 Rendered employees/edit.html.erb within layouts/application (95.6ms)
 Completed 200 OK in 111ms (Views: 101.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 14:29:25 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Rendered employees/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 179ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 14:29:49 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees`
+Rendered employees/index.html.erb within layouts/application (90.6ms)
+Completed 200 OK in 104ms (Views: 96.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 14:29:50 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees`[0m
+Rendered employees/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 29ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets" for 127.0.0.1 at Tue Aug 07 14:29:54 -0700 2012
+  Processing by AssetsController#index as HTML
+  [1m[35mAsset Load (37.1ms)[0m  SELECT `assets`.* FROM `assets` ORDER BY name desc
+Rendered assets/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 141ms (Views: 23.8ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/assets" for 127.0.0.1 at Tue Aug 07 14:30:00 -0700 2012
+  Processing by AssetsController#index as HTML
+  [1m[36mAsset Load (0.8ms)[0m  [1mSELECT `assets`.* FROM `assets` ORDER BY name[0m
+Rendered assets/index.html.erb within layouts/application (321.8ms)
+Completed 200 OK in 502ms (Views: 329.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets" for 127.0.0.1 at Tue Aug 07 14:30:09 -0700 2012
+  Processing by AssetsController#index as HTML
+  [1m[35mAsset Load (0.5ms)[0m  SELECT `assets`.* FROM `assets` ORDER BY idString
+Rendered assets/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 30ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/1/edit" for 127.0.0.1 at Tue Aug 07 14:30:21 -0700 2012
+  Processing by AssetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (58.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAsset Load (0.4ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1
+Rendered assets/_form.html.erb (88.9ms)
+Rendered assets/edit.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 174ms (Views: 102.6ms | ActiveRecord: 58.9ms)
+
+
+Started GET "/assets/8/edit" for 127.0.0.1 at Tue Aug 07 14:30:25 -0700 2012
+  Processing by AssetsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 8 LIMIT 1[0m
+Completed   in 10ms
+
+ActiveRecord::RecordNotFound (Couldn't find Asset with ID=8):
+  app/controllers/assets_controller.rb:37:in `edit'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/assets/7/edit" for 127.0.0.1 at Tue Aug 07 14:30:28 -0700 2012
+  Processing by AssetsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 7 LIMIT 1
+Rendered assets/_form.html.erb (87.7ms)
+Rendered assets/edit.html.erb within layouts/application (92.5ms)
+Completed 200 OK in 108ms (Views: 98.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/assets/7" for 127.0.0.1 at Tue Aug 07 14:30:34 -0700 2012
+  Processing by AssetsController#update as HTML
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"+td+vdFQcNgnyLPkVZzmad2K0TZ8qZRGxFJ5G99gW7o=", "utf8"=>"✓", "id"=>"7", "asset"=>{"name"=>"asdasdasd", "idString"=>"asdasd"}}
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `assets` SET `updated_at` = '2012-08-07 21:30:34', `name` = 'asdasdasd' WHERE `assets`.`id` = 7[0m
+  [1m[35mSQL (25.1ms)[0m  COMMIT
+Redirected to http://localhost:3001/assets
+Completed 302 Found in 113ms
+
+
+Started GET "/assets" for 127.0.0.1 at Tue Aug 07 14:30:34 -0700 2012
+  Processing by AssetsController#index as HTML
+  [1m[36mAsset Load (0.5ms)[0m  [1mSELECT `assets`.* FROM `assets` ORDER BY idString[0m
+Rendered assets/index.html.erb within layouts/application (96.4ms)
+Completed 200 OK in 109ms (Views: 102.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/5/edit" for 127.0.0.1 at Tue Aug 07 14:30:37 -0700 2012
+  Processing by AssetsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 5 LIMIT 1
+Rendered assets/_form.html.erb (11.7ms)
+Rendered assets/edit.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 32ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/assets/5" for 127.0.0.1 at Tue Aug 07 14:30:39 -0700 2012
+  Processing by AssetsController#update as HTML
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"+td+vdFQcNgnyLPkVZzmad2K0TZ8qZRGxFJ5G99gW7o=", "utf8"=>"✓", "id"=>"5", "asset"=>{"name"=>"zx", "idString"=>"a"}}
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE `assets` SET `name` = 'zx', `updated_at` = '2012-08-07 21:30:39' WHERE `assets`.`id` = 5[0m
+  [1m[35mSQL (17.7ms)[0m  COMMIT
+Redirected to http://localhost:3001/assets
+Completed 302 Found in 120ms
+
+
+Started GET "/assets" for 127.0.0.1 at Tue Aug 07 14:30:39 -0700 2012
+  Processing by AssetsController#index as HTML
+  [1m[36mAsset Load (0.5ms)[0m  [1mSELECT `assets`.* FROM `assets` ORDER BY idString[0m
+Rendered assets/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 30ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/5/edit" for 127.0.0.1 at Tue Aug 07 14:30:42 -0700 2012
+  Processing by AssetsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 5 LIMIT 1
+Rendered assets/_form.html.erb (89.6ms)
+Rendered assets/edit.html.erb within layouts/application (93.9ms)
+Completed 200 OK in 110ms (Views: 99.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/9/edit" for 127.0.0.1 at Tue Aug 07 14:30:45 -0700 2012
+  Processing by AssetsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 9 LIMIT 1[0m
+Completed   in 10ms
+
+ActiveRecord::RecordNotFound (Couldn't find Asset with ID=9):
+  app/controllers/assets_controller.rb:37:in `edit'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/assets/6/edit" for 127.0.0.1 at Tue Aug 07 14:30:48 -0700 2012
+  Processing by AssetsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 6 LIMIT 1
+Rendered assets/_form.html.erb (92.6ms)
+Rendered assets/edit.html.erb within layouts/application (97.3ms)
+Completed 200 OK in 114ms (Views: 103.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/assets/6" for 127.0.0.1 at Tue Aug 07 14:30:55 -0700 2012
+  Processing by AssetsController#update as HTML
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"+td+vdFQcNgnyLPkVZzmad2K0TZ8qZRGxFJ5G99gW7o=", "utf8"=>"✓", "id"=>"6", "asset"=>{"name"=>"aa", "idString"=>"asdvvv"}}
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE `assets` SET `updated_at` = '2012-08-07 21:30:55', `name` = 'aa', `idString` = 'asdvvv' WHERE `assets`.`id` = 6[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3001/assets
+Completed 302 Found in 24ms
+
+
+Started GET "/assets" for 127.0.0.1 at Tue Aug 07 14:30:55 -0700 2012
+  Processing by AssetsController#index as HTML
+  [1m[36mAsset Load (0.5ms)[0m  [1mSELECT `assets`.* FROM `assets` ORDER BY idString[0m
+Rendered assets/index.html.erb within layouts/application (100.9ms)
+Completed 200 OK in 114ms (Views: 106.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at Tue Aug 07 14:31:03 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT `employees`.* FROM `employees`
+Rendered employees/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 29ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:31:43 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[36mChkOutIn Load (0.5ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins`[0m
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.4ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+Rendered chk_out_ins/index.html.erb within layouts/application (137.1ms)
+Completed 200 OK in 183ms (Views: 144.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:32:11 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[35mChkOutIn Load (0.4ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY checkedInTime desc, checkedOutTime
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.4ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+Rendered chk_out_ins/index.html.erb within layouts/application (126.3ms)
+Completed 200 OK in 140ms (Views: 130.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/chk_out_ins/edit/1" for 127.0.0.1 at Tue Aug 07 14:32:38 -0700 2012
+
+ActionController::RoutingError (No route matches "/chk_out_ins/edit/1"):
+  
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/chk_out_ins/1/edit" for 127.0.0.1 at Tue Aug 07 14:32:44 -0700 2012
+  Processing by ChkOutInsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChkOutIn Load (0.3ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` WHERE `chk_out_ins`.`id` = 1 LIMIT 1[0m
+Completed   in 11ms
+
+ActiveRecord::RecordNotFound (Couldn't find ChkOutIn with ID=1):
+  app/controllers/chk_out_ins_controller.rb:37:in `edit'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/chk_out_ins/2/edit" for 127.0.0.1 at Tue Aug 07 14:32:48 -0700 2012
+  Processing by ChkOutInsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChkOutIn Load (0.3ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` WHERE `chk_out_ins`.`id` = 2 LIMIT 1
+Completed   in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find ChkOutIn with ID=2):
+  app/controllers/chk_out_ins_controller.rb:37:in `edit'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (104.6ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (110.7ms)
+
+
+Started GET "/chk_out_ins/5/edit" for 127.0.0.1 at Tue Aug 07 14:32:51 -0700 2012
+  Processing by ChkOutInsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mChkOutIn Load (0.3ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` WHERE `chk_out_ins`.`id` = 5 LIMIT 1[0m
+Completed   in 11ms
+
+ActiveRecord::RecordNotFound (Couldn't find ChkOutIn with ID=5):
+  app/controllers/chk_out_ins_controller.rb:37:in `edit'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/chk_out_ins/7/edit" for 127.0.0.1 at Tue Aug 07 14:32:53 -0700 2012
+  Processing by ChkOutInsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mChkOutIn Load (0.3ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` WHERE `chk_out_ins`.`id` = 7 LIMIT 1
+Completed   in 10ms
+
+ActiveRecord::RecordNotFound (Couldn't find ChkOutIn with ID=7):
+  app/controllers/chk_out_ins_controller.rb:37:in `edit'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/chk_out_ins/9/edit" for 127.0.0.1 at Tue Aug 07 14:32:57 -0700 2012
+  Processing by ChkOutInsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mChkOutIn Load (0.3ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` WHERE `chk_out_ins`.`id` = 9 LIMIT 1[0m
+Completed   in 86ms
+
+ActiveRecord::RecordNotFound (Couldn't find ChkOutIn with ID=9):
+  app/controllers/chk_out_ins_controller.rb:37:in `edit'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:34:00 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[35mChkOutIn Load (0.4ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY checkedInTime desc, checkedOutTime
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.4ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1
+Rendered chk_out_ins/index.html.erb within layouts/application (188.5ms)
+Completed   in 202ms
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    18:     <td><%= link_to chk_out_in.employee.name, edit_employee_path(chk_out_in.employee) %></td>
+    19:     <td><%= link_to chk_out_in.asset.name, edit_asset_path(chk_out_in.asset) %></td>
+    20:     <td><%= chk_out_in.checkedOutTime.strftime('%a %b %d, %Y %I:%M %p') %></td>
+    21:     <td><%= chk_out_in.checkedInTime.strftime('%a %b %d, %Y %I:%M %p') %></td>
+    22:   </tr>
+    23: <% end %>
+    24: </tbody>
+  app/views/chk_out_ins/index.html.erb:21:in `_app_views_chk_out_ins_index_html_erb__745347733_2176786600_0'
+  app/views/chk_out_ins/index.html.erb:16:in `each'
+  app/views/chk_out_ins/index.html.erb:16:in `_app_views_chk_out_ins_index_html_erb__745347733_2176786600_0'
+  app/controllers/chk_out_ins_controller.rb:7:in `index'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.1ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:34:47 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[36mChkOutIn Load (0.4ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY checkedInTime desc, checkedOutTime[0m
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.4ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+Rendered chk_out_ins/index.html.erb within layouts/application (220.6ms)
+Completed 200 OK in 234ms (Views: 225.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:35:01 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[35mChkOutIn Load (0.5ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY checkedInTime, checkedOutTime
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.4ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.4ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+Rendered chk_out_ins/index.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 169ms (Views: 66.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:37:50 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[36mChkOutIn Load (41.0ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY is null, checkedInTime, checkedOutTime[0m
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'is null, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY is null, checkedInTime, checkedOutTime
+Completed   in 68ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'is null, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY is null, checkedInTime, checkedOutTime):
+  app/controllers/chk_out_ins_controller.rb:5:in `index'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:38:03 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[35mChkOutIn Load (0.3ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime
+Completed   in 7ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime):
+  app/controllers/chk_out_ins_controller.rb:5:in `index'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:38:03 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[36mChkOutIn Load (0.4ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime[0m
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime
+Completed   in 79ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime):
+  app/controllers/chk_out_ins_controller.rb:5:in `index'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:38:09 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[35mChkOutIn Load (0.3ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NIL, checkedInTime, checkedOutTime
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NIL, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NIL, checkedInTime, checkedOutTime
+Completed   in 8ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NIL, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NIL, checkedInTime, checkedOutTime):
+  app/controllers/chk_out_ins_controller.rb:5:in `index'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:38:16 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[36mChkOutIn Load (0.3ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime[0m
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime
+Completed   in 7ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL, checkedInTime, checkedOutTime' at line 1: SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY IS NULL, checkedInTime, checkedOutTime):
+  app/controllers/chk_out_ins_controller.rb:5:in `index'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:38:34 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[35mChkOutIn Load (90.9ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY ISNULL(), checkedInTime, checkedOutTime
+Mysql2::Error: Incorrect parameter count in the call to native function 'ISNULL': SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY ISNULL(), checkedInTime, checkedOutTime
+Completed   in 99ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect parameter count in the call to native function 'ISNULL': SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY ISNULL(), checkedInTime, checkedOutTime):
+  app/controllers/chk_out_ins_controller.rb:5:in `index'
+
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/Ben/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.3ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:38:50 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[36mChkOutIn Load (113.4ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY ISNULL(checkedInTime), checkedInTime, checkedOutTime[0m
+  [1m[35mEmployee Load (1.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.4ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+Rendered chk_out_ins/index.html.erb within layouts/application (295.7ms)
+Completed 200 OK in 502ms (Views: 378.2ms | ActiveRecord: 115.4ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:39:00 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[35mChkOutIn Load (0.4ms)[0m  SELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY ISNULL(checkedInTime) desc, checkedInTime, checkedOutTime
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.4ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1
+Rendered chk_out_ins/index.html.erb within layouts/application (127.4ms)
+Completed 200 OK in 141ms (Views: 131.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:39:10 -0700 2012
+  Processing by ChkOutInsController#index as HTML
+  [1m[36mChkOutIn Load (0.4ms)[0m  [1mSELECT `chk_out_ins`.* FROM `chk_out_ins` ORDER BY ISNULL(checkedInTime) desc, checkedInTime desc, checkedOutTime[0m
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.4ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mAsset Load (0.4ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
+Rendered chk_out_ins/index.html.erb within layouts/application (122.3ms)
+Completed 200 OK in 228ms (Views: 126.5ms | ActiveRecord: 1.7ms)

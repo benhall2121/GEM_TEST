@@ -17,8 +17,8 @@
   <tr>
     <td><%= link_to chk_out_in.employee.name, edit_employee_path(chk_out_in.employee) %></td>
     <td><%= link_to chk_out_in.asset.name, edit_asset_path(chk_out_in.asset) %></td>
-    <td><%= chk_out_in.checkedOutTime.strftime('%a %b %d, %Y %I:%M %p') %></td>
-    <td><%= chk_out_in.checkedInTime.strftime('%a %b %d, %Y %I:%M %p') %></td>
+    <td><%= chk_out_in.checkedOutTime.strftime('%a %b %d, %Y %I:%M %p') if !chk_out_in.checkedOutTime.nil? %></td>
+    <td><%= chk_out_in.checkedInTime.strftime('%a %b %d, %Y %I:%M %p') if !chk_out_in.checkedInTime.nil? %></td>
   </tr>
 <% end %>
 </tbody>

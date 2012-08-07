@@ -2,7 +2,7 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.xml
   def index
-    @assets = Asset.all
+    @assets = Asset.all(:order => 'name')
 
     respond_to do |format|
       format.html # index.html.erb
