@@ -44,7 +44,7 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       if @asset.save
-        format.html { redirect_to(@asset, :notice => 'Asset was successfully created.') }
+        format.html { redirect_to(assets_path(), :notice => 'Asset was successfully created.') }
         format.xml  { render :xml => @asset, :status => :created, :location => @asset }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       if @asset.update_attributes(params[:asset])
-        format.html { redirect_to(@asset, :notice => 'Asset was successfully updated.') }
+        format.html { redirect_to(assets_path(), :notice => 'Asset was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -1,27 +1,25 @@
-<h1>Listing employees</h1>
+<div  class="hero-unit">
+  <h1>Employees</h1>
+</div> 
 
-<table>
+<div>
+<%= link_to 'New Employee', new_employee_path %>
+</div>
+<table class="table table-striped">
+  <thead>
   <tr>
-    <th>Idstring</th>
+    <th>Employee ID</th>
     <th>Name</th>
-    <th>Admin</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
+</thead>
 
+<tbody>
 <% @employees.each do |employee| %>
   <tr>
-    <td><%= employee.idString %></td>
-    <td><%= employee.name %></td>
-    <td><%= employee.admin %></td>
-    <td><%= link_to 'Show', employee %></td>
-    <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-    <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to employee.idString, edit_employee_path(employee) %></td>
+    <td><%= link_to employee.name, edit_employee_path(employee) %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Employee', new_employee_path %>

@@ -102,10 +102,6 @@ class ChkOutInsController < ApplicationController
       @chk_out_in = ChkOutIn.new(:asset_id => asset_id, :employee_id => employee_id, :checkedOutTime => Time.now)
       @chk_out_in.save
 
-      puts ''
-      puts 'check_out_asset_return_details'
-      puts  @chk_out_in
-
       render :json => @chk_out_in.to_json(:include => [:asset, :employee])
     else       
       json_error_response(404, "Missing params")
