@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GEM</title>
+  <title>TagItOut</title>
 
   <%= stylesheet_link_tag 'bootstrap' %>
   <style>
@@ -11,6 +11,8 @@
     </style>
   <%= stylesheet_link_tag 'bootstrap', 'application' %>
 
+  <link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
+
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -18,7 +20,7 @@
   <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to 'GEM', root_path(), :class => 'brand' %>
+          <%= link_to 'TagItOut', root_path(), :class => 'brand', :style => "font-family: 'Noticia Text', serif;" %>
           <div class="nav-collapse">
             <ul class="nav">
               <li><%= link_to 'Employees', employees_path() %></li>

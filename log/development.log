@@ -7323,3 +7323,45 @@ Started GET "/chk_out_ins" for 127.0.0.1 at Tue Aug 07 14:39:10 -0700 2012
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`id` = 2 LIMIT 1[0m
 Rendered chk_out_ins/index.html.erb within layouts/application (122.3ms)
 Completed 200 OK in 228ms (Views: 126.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 16:58:41 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY name[0m
+Rendered employees/index.html.erb within layouts/application (82.6ms)
+Completed 200 OK in 365ms (Views: 133.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 17:02:29 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY name
+Rendered employees/index.html.erb within layouts/application (178.7ms)
+Completed 200 OK in 274ms (Views: 266.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 17:02:54 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY name[0m
+Rendered employees/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 17:03:14 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY name
+Rendered employees/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 100ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 17:07:04 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT `employees`.* FROM `employees` ORDER BY name[0m
+Rendered employees/index.html.erb within layouts/application (189.6ms)
+Completed 200 OK in 203ms (Views: 195.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Aug 07 17:08:41 -0700 2012
+  Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT `employees`.* FROM `employees` ORDER BY name
+Rendered employees/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 0.5ms)
