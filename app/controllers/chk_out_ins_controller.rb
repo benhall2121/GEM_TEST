@@ -2,12 +2,9 @@ class ChkOutInsController < ApplicationController
   # GET /chk_out_ins
   # GET /chk_out_ins.xml
   def index
-    @chk_out_ins = ChkOutIn.all(:order => 'ISNULL(checkedInTime) desc, checkedInTime desc, checkedOutTime')
+    #@chk_out_ins = ChkOutIn.all(:order => 'ISNULL(checkedInTime) desc, checkedInTime desc, checkedOutTime')
+    @chk_out_ins = ChkOutIn.includes(:employee, :asset).search(params[:search]).order('ISNULL(checkedInTime) desc, checkedInTime desc, checkedOutTime').paginate(:per_page => 10, :page => params[:page])
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @chk_out_ins }
-    end
   end
 
   # GET /chk_out_ins/1

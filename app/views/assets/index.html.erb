@@ -2,23 +2,18 @@
   <h1>Assets</h1>
 </div> 
 
-<div>
-<%= link_to 'New Asset', new_asset_path %>
-</div>
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th>Asset ID</th>
-    <th>Name</th>
-  </tr>
-</thead>
+<%= form_tag assets_path, :method => 'get', :id => "assets_search" do %>
+  <div class="row">
+    <div class="span6">
+      <%= link_to 'New Asset', new_asset_path %>
+    </div>
 
-<tbody>
-<% @assets.each do |asset| %>
-  <tr>
-    <td><%= link_to asset.idString, edit_asset_path(asset) %></td>
-    <td><%= link_to asset.name, edit_asset_path(asset) %></td>
-  </tr>
+    <div class="span6 search_div">
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil, :class => 'btn btn-info' %>
+    </div>
+  </div>
+  <div id="assets"><%= render 'assets' %></div>
 <% end %>
-</tbody>
-</table>
+
+

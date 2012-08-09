@@ -1,0 +1,25 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Asset ID</th>
+    <th>Name</th>
+  </tr>
+</thead>
+
+<tbody>
+<% @assets.each do |asset| %>
+  <tr>
+    <td><%= link_to asset.idString, edit_asset_path(asset) %></td>
+    <td><%= link_to asset.name, edit_asset_path(asset) %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<%= will_paginate @assets, :class => 'pagination-centered' %>
+
+
+

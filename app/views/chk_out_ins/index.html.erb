@@ -2,24 +2,16 @@
   <h1>Check Out In</h1>
 </div> 
 
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th>Employee Name</th>
-    <th>Asset Name</th>
-    <th>Date Checked Out</th>
-    <th>Date Checked In</th>
-  </tr>
-</thead>
+<%= form_tag chk_out_ins_path, :method => 'get', :id => "chk_out_ins_search" do %>
+  <div class="row">
+    <div class="span6">
+      &nbsp;
+    </div>
 
-<tbody>
-<% @chk_out_ins.each do |chk_out_in| %>
-  <tr>
-    <td><%= link_to chk_out_in.employee.name, edit_employee_path(chk_out_in.employee) %></td>
-    <td><%= link_to chk_out_in.asset.name, edit_asset_path(chk_out_in.asset) %></td>
-    <td><%= chk_out_in.checkedOutTime.strftime('%a %b %d, %Y %I:%M %p') if !chk_out_in.checkedOutTime.nil? %></td>
-    <td><%= chk_out_in.checkedInTime.strftime('%a %b %d, %Y %I:%M %p') if !chk_out_in.checkedInTime.nil? %></td>
-  </tr>
+    <div class="span6 search_div">
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil, :class => 'btn btn-info' %>
+    </div>
+  </div>
+  <div id="chk_out_ins"><%= render 'chk_out_ins' %></div>
 <% end %>
-</tbody>
-</table>

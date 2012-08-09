@@ -1,0 +1,24 @@
+
+
+.search_div{
+  text-align:right;
+}
+
+.search_div input{
+	vertical-align: top;
+}
+
+.pagination-centered{
+  margin-top:25px;
+}
+
+.pagination-centered a, .pagination-centered span, .pagination-centered em{
+	border:1px solid #ddd;
+	padding:6px 9px;
+	margin:0;
+}
+
+.pagination-centered a:hover, .pagination-centered em{
+  border:1px solid #ccc;
+  background-color:#eee;
+}

@@ -2,24 +2,19 @@
   <h1>Employees</h1>
 </div> 
 
-<div>
-<%= link_to 'New Employee', new_employee_path %>
-</div>
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th>Employee ID</th>
-    <th>Name</th>
-  </tr>
-</thead>
 
-<tbody>
-<% @employees.each do |employee| %>
-  <tr>
-    <td><%= link_to employee.idString, edit_employee_path(employee) %></td>
-    <td><%= link_to employee.name, edit_employee_path(employee) %></td>
-  </tr>
+
+<%= form_tag employees_path, :method => 'get', :id => "employees_search" do %>
+  <div class="row">
+    <div class="span6">
+      <%= link_to 'New Employee', new_employee_path %>
+    </div>
+
+    <div class="span6 search_div">
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil, :class => 'btn btn-info' %>
+    </div>
+  </div>
+  <div id="employees"><%= render 'employees' %></div>
 <% end %>
-</tbody>
-</table>
 

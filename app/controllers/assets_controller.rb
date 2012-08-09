@@ -2,12 +2,9 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.xml
   def index
-    @assets = Asset.all(:order => 'name')
+    #@assets = Asset.all(:order => 'name')
+    @assets = Asset.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @assets }
-    end
   end
 
   # GET /assets/1

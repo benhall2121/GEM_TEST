@@ -1,0 +1,27 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Employee Name</th>
+    <th>Asset Name</th>
+    <th>Date Checked Out</th>
+    <th>Date Checked In</th>
+  </tr>
+</thead>
+
+<tbody>
+<% @chk_out_ins.each do |chk_out_in| %>
+  <tr>
+    <td><%= link_to chk_out_in.employee.name, edit_employee_path(chk_out_in.employee) %></td>
+    <td><%= link_to chk_out_in.asset.name, edit_asset_path(chk_out_in.asset) %></td>
+    <td><%= chk_out_in.checkedOutTime.strftime('%a %b %d, %Y %I:%M %p') if !chk_out_in.checkedOutTime.nil? %></td>
+    <td><%= chk_out_in.checkedInTime.strftime('%a %b %d, %Y %I:%M %p') if !chk_out_in.checkedInTime.nil? %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<%= will_paginate @employees, :class => 'pagination-centered' %>
+

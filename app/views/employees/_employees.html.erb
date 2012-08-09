@@ -1,0 +1,26 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Employee ID</th>
+    <th>Name</th>
+  </tr>
+</thead>
+
+<tbody>
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= link_to employee.idString, edit_employee_path(employee) %></td>
+    <td><%= link_to employee.name, edit_employee_path(employee) %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<%= will_paginate @employees, :class => 'pagination-centered' %>
+
+
+
+
