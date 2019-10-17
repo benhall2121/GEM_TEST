@@ -8,7 +8,7 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem 'mongrel'
 gem 'rest-client'
 gem 'rake', '0.9.2.2'
-gem 'paperclip', '3.0.1'
+gem 'paperclip', '4.2.2'
 gem 'will_paginate', '3.0.pre2'
 
 
